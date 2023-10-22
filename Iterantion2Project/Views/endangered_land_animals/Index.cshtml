@@ -1,0 +1,256 @@
+﻿@model IEnumerable<Iterantion2Project.Models.endangered_land_animals>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - More</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/css/landanimals.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+    <script src="~/table/echarts.min.js"></script>
+    <style>
+
+        #hero {
+            width: 100%;
+            height: 65vh;
+            background: url('../../assets/back1.png') top center;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
+</head>
+<body>
+
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <section id="hero" style="height:58vh;">
+        <div class="hero-container">
+            <h1>Endangered Animals</h1>
+            <h2>Empowering people to save the endangered animals and their habitats</h2>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h3>About <span>Endangered Animals </span></h3>
+
+                </div>
+
+                <div class="row content">
+                    <div id="chart" style="width: 600px;height:300px;"></div>
+                    <script type="text/javascript">
+
+                        var myChart = echarts.init(document.getElementById('chart'));
+
+
+                        var option = {
+                            color: ["#2f89cf"],
+                            tooltip: {
+                                trigger: "axis",
+                                axisPointer: {
+
+                                    type: "shadow"
+                                }
+                            },
+                            title: {
+                                text: 'Threatened status'
+                            },
+                            tooltip: {},
+                            legend: {
+                                data: ['Amount']
+                            },
+                            xAxis: {
+                                data: ['Conservation', 'Critically', 'Endangered ', 'Extinct', 'Vulnerable'],
+                                color: "rgba(255,255,255,.6) ",
+                                fontSize: "12",
+                                barWidth: '20%'
+                            },
+                            yAxis: {},
+                            series: [
+                                {
+                                    name: 'Amount Number',
+                                    type: 'bar',
+                                    data: [3, 27, 91, 11, 150],
+                                    itemStyle: {
+
+                                        barBorderRadius: 2
+                                    }
+                                }
+                            ]
+                        };
+
+
+                        myChart.setOption(option);
+                    </script>
+
+                    <div class="col-lg-6">
+                        <p>
+
+                        </p>
+                        <ul style="line-height: 2; font-family: cursive; font-size: 18px;">
+                            <li> 75 species go extinct every day around the world, and 3 species are labelled dead every hour.</li>
+                            <li>Any species have disappeared from the earth before scientists can describe and name them,and the rate of extinction is increasing by a hundredfold.</li>
+                            <li>You can explore more endangered animals information from datatable below. </li>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+    </main>
+    <main id="main">
+
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h3>More About <span>Endangered Animals </span></h3>
+                </div>
+            </div>
+        </section><!-- End About Section -->
+
+
+    </main><!-- End #main -->
+    <style>
+        .tablesize a {
+            padding: 0 5px;
+            cursor: pointer;
+        }
+
+        .tablesize {
+            height: 40%;
+            width: 80%;
+            padding-left: 400px;
+            padding-bottom: 50px;
+        }
+    </style>
+    <div class="tablesize">
+        <table class="table" id="example" style="width:100%">
+            <thead>
+                <tr>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Scientific_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Common_Name)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Threatened_status)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Kingdom)
+                    </th>
+                    <th>
+                        @Html.DisplayNameFor(model => model.Class)
+                    </th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Scientific_Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Common_Name)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Threatened_status)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Kingdom)
+                        </td>
+                        <td>
+                            @Html.DisplayFor(modelItem => item.Class)
+                        </td>
+                        <td>
+                        </td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/js/main.js"></script>
+    <script src="~/Scripts/jquery-3.4.1.js"></script>
+    <script src="~/table/dataTables.bootstrap.js"></script>
+    <script src="~/table/jquery.dataTables.js"></script>
+    <link href="~/table/dataTables.bootstrap.min.css" rel="stylesheet" />
+    <script>
+        $(document).ready(function () {
+            $('.table').DataTable({
+                "ordering": false,
+                "pagingType": "simple"
+
+
+            });
+        });
+    </script>
+</body>
+</html>

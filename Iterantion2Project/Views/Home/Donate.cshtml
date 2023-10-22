@@ -1,0 +1,207 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - Donate</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/Content/Main.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+    <style>
+        .icon-box .description {
+        
+            font-style:normal;
+        }
+        .services .icon-box:hover {
+            transform: scale(1.1)
+        }
+
+    </style> 
+</head>
+
+<body>
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero" style="height: 60vh; background: url('../../assets/bg2.jpg') top center; ">
+        <div class="hero-container">
+            <h1>Donation</h1>
+            <h2>Donate your love to help endangered animals</h2>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <section id="services" class="services" style="background-color: rgb(236, 235, 235)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="https://donate.wwf.org.au/#gs.yacz11" target="_blank">
+                                <div class="icon">  <img src="~/logo/wwf.png" width="250" height="180" /></div>
+                                <h4 class="title">WWF</h4>
+                            </a>
+                            <a href="https://donate.wwf.org.au/#gs.yacz11" target="_blank">
+                                <p class="description" style=" width: 250px;">
+                                    WWF is one of Australia’s most trusted conservation organisations.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="https://www.australianwildlife.org/support-us/donate/" target="_blank">
+                                <div class="icon">  <img src="~/logo/AWC.png" width="250" height="180" /></div>
+                                <h4 class="title">AWC</h4>
+                            </a>
+                            <a href="https://www.australianwildlife.org/support-us/donate/" target="_blank">
+                                <p class="description" style=" width: 250px;">
+                                    Australian Wildlife Conservancy is the largest private owner and manager of land for conservation in Australia.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="https://support.acf.org.au/donate?src=2122ECGN1GEDGGNACFWEBODZ2122HFOZZZZZZP" target="_blank">
+                                <div class="icon">  <img src="~/logo/ACF.png" width="250" height="180" /></div>
+                                <h4 class="title">
+                                    ACF
+                                </h4>
+                            </a>
+                            <a href="https://support.acf.org.au/donate?src=2122ECGN1GEDGGNACFWEBODZ2122HFOZZZZZZP" target="_blank">
+                                <p class="description" style=" width: 250px;">
+                                    ACF is Australia's national environment organisation.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </section>
+        <section id="services" class="services" style="background-color: rgb(236, 235, 235)">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="https://www.zoo.org.au/donate/" target="_blank">
+                                <div class="icon">  <img src="~/logo/zoo.png" width="250" height="180" /></div>
+                                <h4 class="title">  Zoos Victoria</h4>
+                            </a>
+                            <a href="https://www.zoo.org.au/donate/" target="_blank">
+                                <p class="description" style=" width: 250px;">
+                                    The Victoria Zoo, which focuses on rescuing all furry, scaly and feathery animals facing extinction.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="https://www.wildlifevictoria.org.au/donate/donate-to-wildlife-victoria" target="_blank">
+                                <div class="icon">  <img src="~/logo/ww.png" width="250" height="180" /></div>
+                                <h4 class="title">  Wildlife Victoria</h4>
+                            </a>
+                            <a href="https://www.wildlifevictoria.org.au/donate/donate-to-wildlife-victoria" target="_blank">
+                                <p class="description" style=" width: 250px;">
+                                    For more than 30 years, Wildlife Victoria has been on call to help sick, injured and orphaned wildlifes.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="https://engage.natureaustralia.org.au/content/donate-widget-express-new/gjm4o1/donate?button=nature.org" target="_blank">
+                                <div class="icon">  <img src="~/logo/nnn.png" width="250" height="180" /></div>
+                                <h4 class="title">
+                                    Nature Conservancy
+                                </h4>
+                            </a>
+                            <a href="https://engage.natureaustralia.org.au/content/donate-widget-express-new/gjm4o1/donate?button=nature.org" target="_blank">
+                                <p class="description" style=" width: 250px;">
+                                    Can help conserve Australia’s natural landscapes & crucial wildlife habitat
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+        </section>
+
+
+
+
+
+    </main><!-- End #main -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+
+</html>

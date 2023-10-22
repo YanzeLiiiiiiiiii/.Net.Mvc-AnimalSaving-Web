@@ -1,0 +1,213 @@
+﻿
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>Blog Single - saveAnimals</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+    <link href="~/assets/img/favicon.png" rel="icon">
+    <link href="~/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/Content/SaveAni.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+    <style>
+
+        .faq-list li:hover {
+            background-color: rgb(236, 235, 235);
+        }
+    </style>
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <section id="hero" style="height: 60vh; background: url('../../assets/save.jpg') top center;">
+
+        <div class="hero-container">
+            <h1>Some Useful Tips Here</h1>
+        </div>
+    </section><!-- End Hero -->
+    <!-- ======= Blog Single Section ======= -->
+    <!-- ======= F.A.Q Section ======= -->
+    <section id="faq" class="faq">
+        <div class="container">
+
+            <div class="section-title">
+                <h3>Tips for <span>helping animals</span></h3>
+
+                <h2 style="background-color:white;">Some Information You May Interest</h2>
+            </div>
+
+            <ul class="faq-list">
+
+                <li>
+                    <div data-bs-toggle="collapse" class="collapsed question" href="#faq1">
+                        How can I help endangered animals in my daily life?
+                    </div>
+                    <div id="faq1" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            <strong>
+                                Limit your consumption of factory-farmed meat and dairy, or non-sustainable palm oil.
+                            </strong>
+                        </p>
+                        <p>
+                            Beef production – more specifically, converting forests to cropland or pasture – is the world’s leading driver of deforestation[1] – and habitat destruction. What’s worse, many of these areas are critical habitat, which means they’re the most important areas to the wild species. As you might expect, palm oil production in Southeast Asia is another major cause.
+
+                            If you do eat beef, try to shop only for local, pasture-raised meats that aren’t fed grains or soy. And try to find RSPO-certified palm oil. Although RSPO isn’t perfect, it’s certainly better than nothing.
+
+                            Remember that you don’t have to adopt a fully vegan lifestyle: any small change is better than none.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq2" class="collapsed question">
+                        How can I help endangered animals at home?
+                    </div>
+                    <div id="faq2" class="collapse" data-bs-parent=".faq-list">
+
+                        <p>
+                            <strong>
+                                At home, plant native wildlife to attract pollinators
+                            </strong>
+                        </p>
+
+                        <p>
+                            If you have a backyard, plant native flowers, trees, and bushes. These provide food and shelter for all sorts of wildlife, including insects like bees and butterflies (which can also help pollinate your plants – a win-win!) But be careful not to plant non-native plants (also known as exotic plants). These are often actually invasive species, which compete or even prey on native species for food and resources, increasing their risk of extinction.
+
+                            If you don’t have a backyard, don’t despair! You could try some window or balcony plants, a window bird feeder, or something else small.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq3" class="collapsed question">
+                        How can I help protecting land in my daily life?
+                    </div>
+                    <div id="faq3" class="collapse" data-bs-parent=".faq-list">
+                        <p> <strong>Buy sustainable products and shop with global conservation in mind.</strong></p>
+                        <p>
+                            The wood used in products like furniture and paper may come from threatened rainforests, so it’s important to check whether the products you buy are sourced sustainably. Similarly, the Congo Basin Rainforest (home to our Mai Ndombe project) is home to several endangered gorilla species – and is a key mining location for minerals used in electronics. The Grauer’s gorilla, for example, has suffered a 77% population decrease in the last two decades partly due to mining.[2] So by recycling your old electronics, you can help reduce the demand for destructive mining activity.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq4" class="collapsed question">
+                        Help endangered species when you travel?
+                    </div>
+                    <div id="faq4" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            By all means, see the world’s wonderful wildlife. Just be respectful and responsible as a tourist. You can take steps to support native wildlife by visiting a wildlife sanctuary to contribute to preservation efforts. You can also avoid buying souvenirs made with products like tortoise shell or ivory, as they might be traded on the black market.
+
+                            Responsible wildlife tourism should support both the people and animals who live in those environments. So if you are traveling through a forest environment, consider supporting the communities that call that forest home – stay local, eat local, and buy local. Your money can ensure that people have the means to protect their natural treasures.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq5" class="collapsed question">
+                        Is there anything else I can easily do in my daily activities?
+                    </div>
+                    <div id="faq5" class="collapse" data-bs-parent=".faq-list">
+                        <p> <strong>Don’t buy plastic products.</strong></p>
+                        <p>
+                            We’ve all heard of the Great Pacific Garbage Patch – the big pile of garbage floating in the North Pacific Ocean. But what about the Great Atlantic Garbage Patch? Yep – it’s a huge pile of trash that floats in the middle of the Atlantic Ocean, and it’s just as bad as the one in the Pacific.
+
+                            Both of these are mostly plastic, and a menace to countless marine species like whales, turtles, dolphins, and fish. So if you can, avoid single-use plastics, and recycle what you do use. Not only do landfills take up a lot of space, but animals often mistake plastic for food, and waste like plastic bags and bottles often ends up in the sea. Use reusable bottles and containers, or compostable ones.
+                        </p>
+                    </div>
+                </li>
+
+                <li>
+                    <div data-bs-toggle="collapse" href="#faq6" class="collapsed question">
+                        What do you do if you see an endangered animal?
+                    </div>
+                    <div id="faq6" class="collapse" data-bs-parent=".faq-list">
+                        <p>
+                            If you encounter an endangered species, allow the animal to move on without stressing it or pursuing it. Get a photo if you can (without following the animal to do so) and share your encounter with a wildlife biologist. We are always interested in where protected species are showing up. Also, you can call or find a nearby animal shelter for further assistance >>
+                            <a href="@Url.Action("shelter", "Home")" style="text-decoration: underline; color: #c06714"
+                               target="popup"
+                               onclick="window.open('@Url.Action("shelter", "Home")','popup','width=800,height=800'); return false;">
+                                VIC Animal Shelter
+                            </a>
+                        </p>
+
+
+
+
+                    </div>
+                </li>
+
+            </ul>
+
+        </div>
+    </section><!-- End F.A.Q Section -->
+    </main><!-- End #main -->
+    <!-- ======= Footer ======= -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+
+</html>

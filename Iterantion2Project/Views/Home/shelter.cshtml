@@ -1,0 +1,179 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - shelter</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./static/mapboxGeocoder.css" type="text/css" />
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.0.1/mapbox-gl.js"></script>
+    <script src="./static/mapboxGeocoder.js"></script>
+    <script type="text/javascript" src="./static/geojson.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css" rel="stylesheet">
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <link href="~/assets/css/animals.css" rel="stylesheet" />
+    <script src="~/map1/geojson.js"></script>
+    <script src="~/map1/mapboxGeocoder.js"></script>
+    <link href="~/map1/mapboxGeocoder.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+
+    <style>
+        .section-title {
+            margin: 40px;
+        }
+
+        #map {
+            position: absolute;
+            height: 65%;
+            width: 80%;
+            overflow: hidden;
+            left: 50%;
+            top: 60%;
+            bottom: 10%;
+            transform: translate(-50%, -50%);
+        }
+
+        .left-panel {
+            position: absolute;
+            width: 300px;
+            height: 100%;
+            background: #fff;
+            z-index: 2;
+            padding: 20px;
+            opacity: 0.8;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs" style="margin: 80px 0 0 0;">
+            <div class="container">
+
+                <ol>
+                    <li><a href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a href="@Url.Action("saveAnimals", "Home")">Save Animals</a></li>
+                    <li>Animals Shelter</li>
+                </ol>
+                <h2>Find the nearest rescue station to help endangered animals you encounter</h2>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <div id="map"></div>
+
+        <script>
+            const App = {
+                init: function () {
+                    this.initMap();
+                    this.addControl();
+                },
+                initMap: function () {
+                    mapboxgl.accessToken =
+                        "pk.eyJ1IjoibGh6Mzc2NjA0MjQ3IiwiYSI6ImNrbTBxbGxtMjF3eTMybnBsOG92eWpnYnkifQ.mnRxYYWHOJ644qlBlfFQZA";
+                    this.map = new mapboxgl.Map({
+                        container: "map",
+                        style: "mapbox://styles/mapbox/light-v10",
+                        center: [145.2527884, -37.7],
+                        zoom: 8,
+                        pitch: 0,
+                    });
+
+                    this.map.on("load", () => {
+                        this.map.addSource("points", {
+                            type: "geojson",
+                            data: geojson,
+                        });
+                        this.map.addLayer({
+                            id: "pointLayer",
+                            source: "points",
+                            type: "circle",
+                            paint: {
+                                "circle-radius": 6,
+                                "circle-color": "#007cbf",
+                            },
+                        });
+                    });
+                    this.map.on("mouseover", "pointLayer", (e) => {
+                        if (this.popup) {
+                            this.popup.remove();
+                        }
+                        const html = `
+                                                                              <div style="font-size:14px; padding: 0 5px">
+                                                                                <div><span style="font-weight:600;">Name</span>: ${e.features[0].properties.name}</div>
+                                                                                <div><span style="font-weight:600;">Address</span>: ${e.features[0].properties.address}</div>
+                                                                              </div>
+                                                                            `;
+                        this.popup = new mapboxgl.Popup({ closeButton: false });
+                        this.popup.setLngLat(e.lngLat).setHTML(html).addTo(this.map);
+                    });
+                },
+                addControl() {
+                    this.map.addControl(
+                        new MapboxGeocoder({
+                            accessToken: mapboxgl.accessToken,
+                            mapboxgl: mapboxgl,
+                        })
+                    );
+                },
+            };
+            App.init();
+        </script>
+
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+</body>
+
+</html>

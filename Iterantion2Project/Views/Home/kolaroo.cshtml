@@ -1,0 +1,257 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - Index</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/Content/Main.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+    <style>
+        .aboutText {
+            width: 200px;
+            height: 180px;
+            border: 2px solid #c06714;
+            box-shadow: 5px 10px 8px #888888;
+            text-align: center;
+            padding: 30px;
+            border-radius: 9%;
+            transition: all 1s;
+        }
+
+            .aboutText:hover {
+                transform: rotate3d(1, 1, 0, 20deg)
+            }
+
+        .services .icon-box:hover {
+            transform: scale(1.1)
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <h1>KOLAROO</h1>
+            <h2>Empowering people to save the endangered animals and their habitats</h2>
+            <a href="#about" class="btn-get-started scrollto">Get Started</a>
+        </div>
+    </section><!-- End Hero -->
+
+    <main id="main">
+
+        <!-- ======= About Section ======= -->
+        <section id="about" class="about">
+            <div class="container">
+
+                <div class="section-title">
+
+                    <h3>About <span>Endangered Animals</span></h3>
+
+                </div>
+
+                <div class="row content">
+                    <div class="col-lg-5">
+                        <img src="~/assets/about1.png" class="img-fluid" alt="" style="height:400px">
+                    </div>
+                    <div class="col-lg-7" style=" perspective: 500px;">
+                        <div class="row content">
+                            <div class="col-lg-3" style="padding:100px 0; margin:0 20px">
+                                <div class="aboutText">
+                                    <h2 style="color: #d35959">1897</h2>
+                                    <h6 style="font-style:italic">endangered species left in Australia!</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3" style="padding: 100px 0; margin: 0 20px">
+                                <div class="aboutText">
+                                    <h2 style="color: #d35959">282</h2>
+                                    <h6 style="font-style:italic">endangered species left in Victoria!</h6>
+                                </div>
+                            </div>
+                            <div class="col-lg-3" style="padding: 100px 0; margin: 0 20px">
+                                <div class="aboutText">
+                                    <h2 style="color: #d35959">63</h2>
+                                    <h6 style="font-style:italic">endangered species left in Melbourne!</h6>
+                                </div>
+                            </div>
+
+                        </div>
+                        @*<ul style="line-height: 2.5; font-family: cursive;color: rgb(8, 117, 150); font-size: 18px;">
+                                <li><i class="ri-check-double-line"></i> There are only 1897 threaten species left in Australia!</li>
+                                <li><i class="ri-check-double-line"></i> There are only 282 threaten species left in Victoria!</li>
+                                <li><i class="ri-check-double-line"></i> There are only 63 threaten species left in Melbourne!</li>
+                            </ul>*@
+                    </div>
+                </div>
+
+            </div>
+        </section><!-- End About Section -->
+
+
+        <section id="services" class="services" style="background-color: rgb(236, 235, 235);">
+            <div class="container">
+
+                <div class="section-title">
+                    <h3>We do offer awesome <span>Services</span></h3>
+                </div>
+                <br />
+                <div class="row" style="perspective: 500px;">
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="@Url.Action("landanimals", "Home")">
+                                <div class="icon">  <img src="~/assets/service/1.jpg" width="250" height="250" /></div>
+                                <h4 class="title">
+                                    LandAnimals
+                                </h4>
+                            </a>
+                            <a href="@Url.Action("landanimals", "Home")">
+                                <p class="description">
+                                    Information about Victoria's endangered animals and status.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="@Url.Action("habitat", "Home")">
+                                <div class="icon"> <img src="~/assets/service/2.jpg" width="250" height="250" /></div>
+                                <h4 class="title">
+                                    Habitats
+                                </h4>
+                            </a>
+                            <a href="@Url.Action("habitat", "Home")">
+                                <p class="description">
+                                    Information about Victoria's Habitats and locations.
+                                </p>
+                            </a>
+                        </div>
+
+                    </div>
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="@Url.Action("saveAnimals", "Home")">
+                                <div class="icon">  <img src="~/assets/service/4.jpg" width="250" height="250" /></div>
+                                <h4 class="title">SaveAnimals</h4>
+                            </a>
+                            <a href="@Url.Action("Donate", "Home")">
+                                <p class="description">
+                                    Tips for helping animals and finding animals shelters.
+                                </p>
+                            </a>
+
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 col-lg-3 d-flex align-items-stretch mb-5 mb-lg-0">
+                        <div class="icon-box">
+                            <a href="@Url.Action("Donate", "Home")">
+                                <div class="icon">  <img src="~/assets/service/3.jpeg" width="250" height="250" /></div>
+                                <h4 class="title">
+                                    Donation
+                                </h4>
+                            </a>
+                            <a href="@Url.Action("Donate", "Home")">
+                                <p class="description">
+                                    Donate your love to save endangered animals.
+                                </p>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hero1">
+            <div class="hero-container">
+
+            </div>
+            <div class="anmition">
+                <img src="~/assets/bg1.png" style="height:18vh">
+                <div class="bear">
+                </div>
+            </div>
+        </section><!-- End Hero -->
+
+
+
+        <section id="cta" class="cta">
+            <div class="container">
+
+                <div class="text-center">
+                    <h3>About US</h3>
+                    <p> Due to the increasing frequency of human activities, some animal populations have shrunk or even become extinct. Kolaroo is a website dedicated to promoting the protection and awareness of endangered species and habitats..</p>
+                </div>
+
+            </div>
+        </section><!-- End Cta Section -->
+
+
+
+
+    </main><!-- End #main -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+
+</html>

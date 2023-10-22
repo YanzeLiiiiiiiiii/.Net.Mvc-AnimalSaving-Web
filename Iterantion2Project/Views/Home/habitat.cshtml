@@ -1,0 +1,180 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - Habitat</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+
+    <!-- Favicons -->
+
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/css/Habitat.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+    <style>
+
+        #hero {
+            width: 100%;
+            height: 65vh;
+            background: url('../../assets/habitat.jpg') top center;
+            background-size: cover;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body>
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+    <!-- ======= Hero Section ======= -->
+    <section id="hero">
+        <div class="hero-container">
+            <h1>Habitat</h1>
+            <h2>Empowering people to save the habitats</h2>
+
+        </div>
+    </section><!-- End Hero -->
+    <main id="main">
+
+        <section id="portfolio" class="portfolio">
+            <div class="container">
+
+                <div class="section-title">
+                    <h3>Meet Victoria's <span>Habitats</span></h3>
+                    <p>
+                        Habitats are often identified by the characteristic vegetation they support. Victoria's land area supports a wider range of ecosystems than any similarly sized area in Australia. Explore more information about the Habitats.
+                    </p>
+                </div>
+
+                <div class="row">
+                    <div class="col-lg-12 d-flex justify-content-center">
+                        <ul id="portfolio-flters">
+                            <li data-filter="*" class="filter-active">All</li>
+                            <li data-filter=".filter-1">DRYFORESTS&WOODLANDS</li>
+                            <li data-filter=".filter-2">GRASSLANDS</li>
+
+                            <li data-filter=".filter-4">THE ALPS</li>
+
+                            <li data-filter=".filter-6">FORESTS AND RAINFOREST</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="row portfolio-container" style=" margin-left: auto; margin-right: auto; text-align: center;">
+
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-1">
+                        <a href="@Url.Action("DRYFORESTSANDWOODLANDS","habitat")" target="_blank">
+                            <img src="~/assets/portfolio/DRY FORESTS AND WOODLANDS.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="portfolio-info">
+                            <h4>DRY FORESTS AND WOODLANDS</h4>
+                            <a href="@Url.Action("DRYFORESTSANDWOODLANDS","habitat")" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div></a>
+
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-2">
+                        <a href="@Url.Action("GRASSLANDS","habitat")" target="_blank">
+                            <img src="~/assets/portfolio/GRASSLANDS.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="portfolio-info">
+                            <h4>GRASSLANDS</h4>
+
+                            <a href="@Url.Action("GRASSLANDS","habitat")" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-4">
+                        <a href="@Url.Action("THEALPS","habitat")" target="_blank">
+                            <img src="~/assets/portfolio/THE ALPS.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="portfolio-info">
+                            <h4>THE ALPS</h4>
+
+                            <a href="@Url.Action("THEALPS","habitat")" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+
+
+                    <div class="col-lg-3 col-md-6 portfolio-item filter-6">
+                        <a href="@Url.Action("WETFORESTSANDRAINFOREST","habitat")" target="_blank">
+                            <img src="~/assets/portfolio/WET FORESTS AND RAINFOREST.jpg" class="img-fluid" alt="">
+                        </a>
+                        <div class="portfolio-info">
+                            <h4>WET FORESTS AND RAINFOREST</h4>
+
+                            <a href="@Url.Action("WETFORESTSANDRAINFOREST","habitat")" class="details-link" title="More Details"><i class="bx bx-link"></i></a>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </section><!-- End Portfolio Section -->
+    </main><!-- End #main -->
+
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+    <!-- Vendor JS Files -->
+    <script src="~/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="~/assets/vendor/glightbox/js/glightbox.min.js"></script>
+    <script src="~/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+    <script src="~/assets/vendor/swiper/swiper-bundle.min.js"></script>
+    <script src="~/assets/vendor/php-email-form/validate.js"></script>
+
+    <!-- Template Main JS File -->
+    <script src="~/assets/js/main.js"></script>
+
+</body>
+
+</html>

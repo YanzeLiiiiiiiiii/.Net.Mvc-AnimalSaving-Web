@@ -1,0 +1,182 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - WET FORESTS AND RAINFOREST</title>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/css/animals.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs" style="margin: 80px 0 0 0;">
+            <div class="container">
+
+                <ol>
+                    <li><a href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a href="@Url.Action("habitat", "Home")">Habitat</a></li>
+                    <li>Wet Forests and Rain Forests</li>
+                </ol>
+                <h2>Wet Forests and Rain Forests</h2>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= Blog Single Section ======= -->
+        <section id="blog" class="blog">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-8 entries">
+
+                        <article class="entry entry-single">
+
+                            <div class="entry-img">
+                                <img src="~/assets/portfolio/WET FORESTS AND RAINFOREST.jpg" alt="" class="img-fluid" style="padding-left:20px;">
+                            </div>
+
+
+                            <h2 class="entry-title">
+                                Wet Forests and Rain Forests
+                            </h2>
+
+
+
+                            <div class="entry-content">
+                                <p>
+                                    The wet eucalyptus forest is home to some of Victoria's tallest trees, including the world's largest flowering plant, the Mountain Ash, which can reach a height of 100 metres and a circumference of 15 metres. In rainforests and sheltered gullies, the dense canopy of non-eucalyptus species, climbers, broadleaf shrubs, and tree ferns provide shade for a variety of ferns, shrubs, moss, and countless other life forms.
+
+                                </p>
+                                <h2 class="entry-title">
+                                    Location
+                                </h2>
+                                <p>
+                                    Where to see wet forests and rainforest
+                                </p>
+                                <blockquote>
+                                </blockquote>
+                                <div class="container" data-aos="fade-up">
+                                    <div>
+
+                                        <iframe style="border:0; width: 100%; height: 400px;"
+                                                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3165.615787588714!2d145.24817121590678!3d-37.49339212355302!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad7c4fa3c6070b5%3A0xf0579a51442d090!2sKinglake%20National%20Park!5e0!3m2!1sen!2sau!4v1651205194304!5m2!1sen!2sau"
+                                                frameborder="0" allowfullscreen></iframe>
+                                    </div>
+                                    <a href="@Url.Action("HabitatMap", "Home")" style="float:left"
+                                       target="popup"
+                                       onclick="window.open('@Url.Action("HabitatMap", "Home")','popup','width=800,height=800'); return false;">
+                                        View Full Map>>>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                    </div><!-- End blog entries list -->
+
+                    <div class="col-lg-4">
+
+                        <div class="sidebar">
+
+                            <h3 class="sidebar-title">Threats</h3>
+                            <div class="sidebar-item categories">
+                                <ul>
+                                    <li>
+                                        Weed infestation
+                                    </li>
+
+                                    <li>
+                                        Predation of native animals by introduced species
+
+                                    </li>
+                                    <li>
+                                        Phytophthora cinnamomi (fungal dieback)
+                                    </li>
+                                    <li>
+                                        In young forests hollows are scarce resulting in less diverse and smaller populations of forest animals
+                                    </li>
+                                </ul>
+                            </div><!-- End sidebar categories-->
+
+
+
+                            <h3 class="sidebar-title"> Endangered Animals Included:</h3>
+                            <div class="sidebar-item tags">
+                                <ul>
+                                    <li><a href="@Url.Action("BrushtailedRock", "Animal")">BrushtailedRock</a></li>
+                                    <li><a href="@Url.Action("TigerQuoll", "Animal")">Tiger Quoll</a></li>
+                                    <li><a href="@Url.Action("StripedSnakeLizard", "Animal")">Striped Legless Lizard</a></li>
+                                    <li><a href="@Url.Action("BawBawFrog", "Animal")">Baw Baw Frog</a></li>
+                                </ul>
+                            </div><!-- End sidebar tags-->
+
+                        </div><!-- End sidebar -->
+
+                    </div><!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+        </section><!-- End Blog Single Section -->
+
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+</body>
+
+</html>

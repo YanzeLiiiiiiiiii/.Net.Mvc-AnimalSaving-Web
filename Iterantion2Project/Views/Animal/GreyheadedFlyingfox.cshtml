@@ -1,0 +1,167 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+    <title>KOLAROO - GreyheadedFlyingfox</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="~/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="~/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+    <link href="~/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <link href="~/assets/css/animals.css" rel="stylesheet" />
+    <link rel="shortcut icon" type="image/x-icon" href="~/favicon1.ico" />
+</head>
+
+<body>
+
+    <header id="header" class="fixed-top header-inner-pages">
+        <div class="container d-flex align-items-center justify-content-between">
+            <a href="@Url.Action("kolaroo", "Home")" class="logo"><img src="~/assets/Logo.png" alt="" class="img-fluid"></a>
+
+            <nav id="navbar" class="navbar">
+                <ul>
+                    <li><a class="nav-link scrollto" href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("landanimals", "Home" )">Land Animals</a></li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("habitat", "Home")"><span>Habitats</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("habitat", "Home")">Protecting Land</a></li>
+                            <li><a href="@Url.Action("HabitatMap", "Home")">Explore habitat from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="@Url.Action("saveAnimals", "Home")"><span>Save Animals</span></a>
+                        <ul>
+                            <li><a href="@Url.Action("saveAnimals", "Home")">Help Endangered Animals</a></li>
+                            <li><a href="@Url.Action("shelter", "Home")">Find shelter from the Map</a></li>
+                        </ul>
+                    </li>
+                    <li><a class="nav-link scrollto" href="@Url.Action("Donate", "Home")">Donation</a></li>
+                    <li><a class="nav-link scrollto" href="/Quiz.aspx/">Check Your Knowledge</a></li>
+                </ul>
+                <i class="bi bi-list mobile-nav-toggle"></i>
+            </nav><!-- .navbar -->
+
+        </div>
+    </header><!-- End Header -->
+
+    <main id="main">
+
+        <!-- ======= Breadcrumbs ======= -->
+        <section id="breadcrumbs" class="breadcrumbs" style="margin: 80px 0 0 0;">
+            <div class="container">
+
+                <ol>
+                    <li><a href="@Url.Action("kolaroo", "Home" )">Home</a></li>
+                    <li><a href="@Url.Action("landanimals", "Home")">Land Animals</a></li>
+                    <li>GreyheadedFlyingfox</li>
+                </ol>
+                <h2>GreyheadedFlyingfox</h2>
+
+            </div>
+        </section><!-- End Breadcrumbs -->
+        <!-- ======= Blog Single Section ======= -->
+        <section id="blog" class="blog">
+            <div class="container" data-aos="fade-up">
+
+                <div class="row">
+
+                    <div class="col-lg-8 entries">
+
+                        <article class="entry entry-single">
+
+                            <div class="entry-img">
+                                <img src="~/assets/portfolio/Grey-headed Flying-fox.jpg" alt="" class="img-fluid" style="padding-left:20px;">
+                            </div>
+
+
+                            <h2 class="entry-title">
+                                <a href="blog-single.html">GreyheadedFlyingfox</a>
+                            </h2>
+
+
+
+                            <div class="entry-content">
+                                <p>
+                                    The Grey-headed Flying-fox is Australia's only endemic flying-fox and occurs in the coastal belt from Rockhampton in central Queensland to Melbourne in Victoria (Tidemann 1998).
+                                </p>
+                                <p>
+                                    However, only a small proportion of this range is used at any one time, as the species selectively forages where food is available. As a result, patterns of occurrence and relative abundance within its distribution vary widely between seasons and between years
+                                </p>
+                                <blockquote>
+                                </blockquote>
+
+
+                            </div>
+
+                        </article><!-- End blog entry -->
+
+                    </div><!-- End blog entries list -->
+
+                    <div class="col-lg-4">
+
+                        <div class="sidebar">
+
+                            <h3 class="sidebar-title" style="font-size:20px">Threats</h3>
+                            <div class="sidebar-item categories">
+                                <ul>
+                                    <li>
+                                        Loss of grassland habitat
+                                    </li>
+                                    <li>
+                                        Competition with Black Flying Fox
+
+                                    </li>
+                                    <li>
+                                        extreme temperature events
+
+                                    </li>
+
+                                </ul>
+                            </div><!-- End sidebar categories-->
+
+
+
+                            <h3 class="sidebar-title">You May Also Like:</h3>
+                            <div class="sidebar-item tags">
+                                <ul>
+                                    <li><a href="@Url.Action("StripedSnakeLizard", "Animal")">Striped Snake-lizard</a></li>
+                                    <li><a href="@Url.Action("GrasslandEarlessDragon", "Animal")">Grassland Earless Dragon</a></li>
+                                    <li><a href="@Url.Action("EasternBarredBandicoot", "Animal")">Eastern Barred Bandicoot</a></li>
+                                    <li><a href="@Url.Action("DRYFORESTSANDWOODLANDS", "habitat")">Dry Forests and Woodlands(Primary Habitat)</a></li>
+                                    <h3 class="sidebar-title">All endangered animals in VIC:</h3>
+                                    <li><a href="@Url.Action("Index", "endangered_land_animals")">DataTable and Chart</a></li>
+                                </ul>
+                            </div><!-- End sidebar tags-->
+
+                        </div><!-- End sidebar -->
+
+                    </div><!-- End blog sidebar -->
+
+                </div>
+
+            </div>
+        </section><!-- End Blog Single Section -->
+
+    </main><!-- End #main -->
+
+    <a href="#" class="back-to-top d-flex align-items-center justify-content-center">
+        <i class="bi bi-arrow-up-short"></i>
+    </a>
+
+
+</body>
+
+</html>
